@@ -8,6 +8,7 @@ public class NumberGroupButton : MonoBehaviour
 {
     [SerializeField] Button button;
     public int totalBetOnThisButton;
+    [SerializeField] bool isRowButton;
 
     TotalBetTextDisplayer totalBetTextDisplayerReference;
     BalanceAmountTextDisplayer balanceAmountTextDisplayerReference;
@@ -43,10 +44,10 @@ public class NumberGroupButton : MonoBehaviour
         betAnimationController = FindObjectOfType<PlaceBetAnimation>();
         groupButtons = new List<numberButton>();
         AddAllButtonsToList();
-        button.onClick.AddListener(PlaceBetOnEachButton);        
+        button.onClick.AddListener(PlaceBet);        
     }
 
-    private void PlaceBetOnEachButton()
+    private void PlaceBet()
     {
         if (BetManager.IsMoneyEnough())
         {
@@ -84,7 +85,7 @@ public class NumberGroupButton : MonoBehaviour
         }
     }
 
-    private void PlaceBet()
+    /*private void PlaceBet()
     {
         if (BetManager.IsMoneyEnough())
         {
@@ -117,7 +118,7 @@ public class NumberGroupButton : MonoBehaviour
         {
             Debug.Log("Not enough money to place current chip");
         }
-    }
+    }*/
 
     private void UpdateTextDisplayers()
     {
@@ -127,23 +128,42 @@ public class NumberGroupButton : MonoBehaviour
 
     private void AddAllButtonsToList()
     {
-        groupButtons.Add(button1);
-        groupButtons.Add(button2);
-        groupButtons.Add(button3);
-        groupButtons.Add(button4);
-        groupButtons.Add(button5);
-        groupButtons.Add(button6);
-        groupButtons.Add(button7);
-        groupButtons.Add(button8);
-        groupButtons.Add(button9);
-        groupButtons.Add(button10);
-        groupButtons.Add(button11);
-        groupButtons.Add(button12);
-        groupButtons.Add(button13);
-        groupButtons.Add(button14);
-        groupButtons.Add(button15);
-        groupButtons.Add(button16);
-        groupButtons.Add(button17);
-        groupButtons.Add(button18);        
+        if(isRowButton)
+        {
+            groupButtons.Add(button1);
+            groupButtons.Add(button2);
+            groupButtons.Add(button3);
+            groupButtons.Add(button4);
+            groupButtons.Add(button5);
+            groupButtons.Add(button6);
+            groupButtons.Add(button7);
+            groupButtons.Add(button8);
+            groupButtons.Add(button9);
+            groupButtons.Add(button10);
+            groupButtons.Add(button11);
+            groupButtons.Add(button12);
+        }
+        else
+        {
+            groupButtons.Add(button1);
+            groupButtons.Add(button2);
+            groupButtons.Add(button3);
+            groupButtons.Add(button4);
+            groupButtons.Add(button5);
+            groupButtons.Add(button6);
+            groupButtons.Add(button7);
+            groupButtons.Add(button8);
+            groupButtons.Add(button9);
+            groupButtons.Add(button10);
+            groupButtons.Add(button11);
+            groupButtons.Add(button12);
+            groupButtons.Add(button13);
+            groupButtons.Add(button14);
+            groupButtons.Add(button15);
+            groupButtons.Add(button16);
+            groupButtons.Add(button17);
+            groupButtons.Add(button18);
+        }
+           
     }
 }

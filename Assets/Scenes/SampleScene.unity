@@ -1183,7 +1183,7 @@ PrefabInstance:
     - target: {fileID: 7015220034031124143, guid: 7715fe736bd73a846aba849dac6d141d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7015220034031124143, guid: 7715fe736bd73a846aba849dac6d141d,
         type: 3}
@@ -3490,7 +3490,7 @@ PrefabInstance:
     - target: {fileID: 7015220034031124143, guid: 7715fe736bd73a846aba849dac6d141d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7015220034031124143, guid: 7715fe736bd73a846aba849dac6d141d,
         type: 3}
@@ -3784,7 +3784,7 @@ PrefabInstance:
     - target: {fileID: 7015220034031124143, guid: 7715fe736bd73a846aba849dac6d141d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7015220034031124143, guid: 7715fe736bd73a846aba849dac6d141d,
         type: 3}
@@ -3972,6 +3972,11 @@ PrefabInstance:
       propertyPath: button12
       value: 
       objectReference: {fileID: 195250358}
+    - target: {fileID: 7015220034031124142, guid: 7715fe736bd73a846aba849dac6d141d,
+        type: 3}
+      propertyPath: isRowButton
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7015220034031124143, guid: 7715fe736bd73a846aba849dac6d141d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6188,6 +6193,11 @@ PrefabInstance:
       propertyPath: button12
       value: 
       objectReference: {fileID: 100013840}
+    - target: {fileID: 7015220034031124142, guid: 7715fe736bd73a846aba849dac6d141d,
+        type: 3}
+      propertyPath: isRowButton
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7015220034031124143, guid: 7715fe736bd73a846aba849dac6d141d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7935,7 +7945,7 @@ PrefabInstance:
     - target: {fileID: 7015220034031124143, guid: 7715fe736bd73a846aba849dac6d141d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7015220034031124143, guid: 7715fe736bd73a846aba849dac6d141d,
         type: 3}
@@ -8125,7 +8135,7 @@ PrefabInstance:
     - target: {fileID: 7015220034031124143, guid: 7715fe736bd73a846aba849dac6d141d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7015220034031124143, guid: 7715fe736bd73a846aba849dac6d141d,
         type: 3}
@@ -8736,7 +8746,7 @@ PrefabInstance:
     - target: {fileID: 7015220034031124143, guid: 7715fe736bd73a846aba849dac6d141d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7015220034031124143, guid: 7715fe736bd73a846aba849dac6d141d,
         type: 3}
@@ -9590,6 +9600,11 @@ PrefabInstance:
       propertyPath: button12
       value: 
       objectReference: {fileID: 2053895478}
+    - target: {fileID: 7015220034031124142, guid: 7715fe736bd73a846aba849dac6d141d,
+        type: 3}
+      propertyPath: isRowButton
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7015220034031124143, guid: 7715fe736bd73a846aba849dac6d141d,
         type: 3}
       propertyPath: m_LocalPosition.x
