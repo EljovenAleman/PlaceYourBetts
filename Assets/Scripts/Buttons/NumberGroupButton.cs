@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class NumberGroupButton : MonoBehaviour
 {
-    [SerializeField] Button button;
+    [SerializeField] Button groupButton;
     public int totalBetOnThisButton;
     [SerializeField] bool isRowButton;
 
@@ -44,7 +44,7 @@ public class NumberGroupButton : MonoBehaviour
         betAnimationController = FindObjectOfType<PlaceBetAnimation>();
         groupButtons = new List<numberButton>();
         AddAllButtonsToList();
-        button.onClick.AddListener(PlaceBet);        
+        groupButton.onClick.AddListener(PlaceBet);        
     }
 
     private void PlaceBet()
@@ -56,6 +56,8 @@ public class NumberGroupButton : MonoBehaviour
 
             BetManager.totalBet += BetManager.betValue;
             BetManager.totalMoney -= BetManager.betValue;
+            
+
             totalBetOnThisButton += BetManager.betValue;
 
             //buttonText.text = BetManager.totalBet.ToString();
@@ -69,11 +71,30 @@ public class NumberGroupButton : MonoBehaviour
             {
                 if (BetManager.betData.Contains(button))
                 {
-
+                    if(isRowButton)
+                    {
+                        button.inAColumnOrDozenBet = true;
+                        button.ColumnOrDozenBetValue += BetManager.betValue;
+                    }
+                    else
+                    {
+                        button.inAColorEvenOddorlowHighBet = true;
+                        button.ColorOrEvenOddBetValue += BetManager.betValue;
+                    }
                 }
                 else
                 {
                     BetManager.betData.Add(button);
+                    if (isRowButton)
+                    {
+                        button.inAColumnOrDozenBet = true;
+                        button.ColumnOrDozenBetValue += BetManager.betValue;
+                    }
+                    else
+                    {
+                        button.inAColorEvenOddorlowHighBet = true;
+                        button.ColorOrEvenOddBetValue += BetManager.betValue;
+                    }
                 }
             }
 

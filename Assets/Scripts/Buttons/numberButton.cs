@@ -18,15 +18,31 @@ public class numberButton : MonoBehaviour
     ButtonAnimationController buttonController;
     PlaceBetAnimation betAnimationController;
 
+    //Bet types
+    public bool inAStraightBet = false;
+    public bool inAColumnOrDozenBet = false;    
+    public bool inAColorEvenOddorlowHighBet = false;
+
+    //Bet int to then pay
+    public int straightBetValue = 0;
+    public int ColumnOrDozenBetValue = 0;
+    public int ColorOrEvenOddBetValue = 0;
+
+
+    
+
+
     void Start()
     {
         buttonController = FindObjectOfType<ButtonAnimationController>();
         totalBetTextDisplayerReference = FindObjectOfType<TotalBetTextDisplayer>();
         balanceAmountTextDisplayerReference = FindObjectOfType<BalanceAmountTextDisplayer>();
-        betAnimationController = FindObjectOfType<PlaceBetAnimation>();
+        betAnimationController = FindObjectOfType<PlaceBetAnimation>();        
         
         button.onClick.AddListener(PlaceBet);
     }
+
+    
 
     private void PlaceBet()
     {
@@ -37,6 +53,10 @@ public class numberButton : MonoBehaviour
 
             BetManager.totalBet += BetManager.betValue;
             BetManager.totalMoney -= BetManager.betValue;
+
+            inAStraightBet = true;
+            straightBetValue += BetManager.betValue;
+
             totalBetOnThisButton += BetManager.betValue;
             
             //buttonText.text = BetManager.totalBet.ToString();

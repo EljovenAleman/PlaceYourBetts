@@ -22,7 +22,7 @@ public static class BetManager
         {
             if(betNumber.buttonNumber == number)
             {
-                PayWinningBet();
+                PayWinningBet(betNumber);
                 Debug.Log("Congratulations, you won");
                 thePlayerLost = false;                
             }            
@@ -36,9 +36,20 @@ public static class BetManager
 
     }
 
-    private static void PayWinningBet()
+    private static void PayWinningBet(numberButton winningButton)
     {
-        totalMoney += totalBet * 4;
+        if(winningButton.inAStraightBet)
+        {
+            totalMoney += winningButton.straightBetValue * 4;
+        }
+        if (winningButton.inAColumnOrDozenBet)
+        {
+            totalMoney += winningButton.ColumnOrDozenBetValue * 2;
+        }
+        if (winningButton.inAColorEvenOddorlowHighBet)
+        {
+            totalMoney += winningButton.ColorOrEvenOddBetValue * 1;
+        }
     }
 
     public static bool IsMoneyEnough()
