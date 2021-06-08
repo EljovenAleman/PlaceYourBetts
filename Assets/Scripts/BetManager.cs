@@ -40,15 +40,15 @@ public static class BetManager
     {
         if(winningButton.inAStraightBet)
         {
-            totalMoney += winningButton.straightBetValue * 4;
+            totalMoney += winningButton.straightBetValue * 36;
         }
         if (winningButton.inAColumnOrDozenBet)
         {
-            totalMoney += winningButton.ColumnOrDozenBetValue * 2;
+            totalMoney += winningButton.ColumnOrDozenBetValue * 3;
         }
         if (winningButton.inAColorEvenOddorlowHighBet)
         {
-            totalMoney += winningButton.ColorOrEvenOddBetValue * 1;
+            totalMoney += winningButton.ColorOrEvenOddBetValue * 2;
         }
     }
 
