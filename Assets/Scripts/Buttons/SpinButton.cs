@@ -11,7 +11,7 @@ public class SpinButton : MonoBehaviour
     public int ballNumber;
 
     Wheel wheel;
-
+    
     void Start()
     {
         wheel = FindObjectOfType<Wheel>();

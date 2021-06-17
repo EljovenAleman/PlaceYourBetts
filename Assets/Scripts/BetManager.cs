@@ -21,10 +21,7 @@ public static class BetManager
     public static void CheckNumberOnList(int number) 
     {
         winnerNumber = number;
-        //Iniciar task que para la ruleta, luego de que pare correctamente en el número chequear si el usuario ganó
-        //por ahora lo hago acá adentro porque no sé como sacar de la task en SpinButton el number
-        
-
+                
         foreach (numberButton betNumber in betData)
         {
             if(betNumber.buttonNumber == number)
