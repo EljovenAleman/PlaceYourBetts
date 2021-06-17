@@ -16,12 +16,20 @@ public static class BetManager
 
     public static List<numberButton> betData = new List<numberButton>();
 
+    public static int winnerNumber = 0;
+    
     public static void CheckNumberOnList(int number) 
     {
-        foreach(numberButton betNumber in betData)
+        winnerNumber = number;
+        //Iniciar task que para la ruleta, luego de que pare correctamente en el número chequear si el usuario ganó
+        //por ahora lo hago acá adentro porque no sé como sacar de la task en SpinButton el number
+        
+
+        foreach (numberButton betNumber in betData)
         {
             if(betNumber.buttonNumber == number)
             {
+                
                 PayWinningBet(betNumber);
                 Debug.Log("Congratulations, you won");
                 thePlayerLost = false;                
@@ -32,7 +40,7 @@ public static class BetManager
         {
             Debug.Log("You lose, sorry");            
         }
-        thePlayerLost = true;
+        thePlayerLost = true;        
 
     }
 
